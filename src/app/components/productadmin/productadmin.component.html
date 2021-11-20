@@ -1,0 +1,31 @@
+<div class="container">
+    <button class="btn" id="bouton" (click)="addButton()">Ajouter un produit</button>
+
+    <div class="row">
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th scope="col" >Image</th>
+                    <th scope="col"class="text-light">Nom du produit</th>
+                    <th scope="col" class="text-light">Prix du produit</th>
+                    <th scope="col" class="text-light">Description</th>
+                    <th scope="col" class="text-light">Options</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let p of prods">
+                    <td><img src="" alt="" ></td>
+                    <td>{{p.name}}</td>
+                    <td>{{p.montant}}</td>
+                    <td>{{p.description}}</td>
+                    <td>
+                        <div class="icon">
+                            <div><button><i class="fa fa-edit" title="Edit" (click)="updateProd(p.id)" ></i></button></div>
+                            <div><button><i class="fa fa-trash-alt" title="Delete" (click)="deleteProd(p.id)" ></i></button></div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

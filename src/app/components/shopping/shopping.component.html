@@ -1,0 +1,175 @@
+ <!-- ======= Top Bar ======= -->
+ <section id="topbar" class="d-flex align-items-center">
+    <div class="container d-flex justify-content-center justify-content-md-between">
+        <div class="contact-info d-flex align-items-center">
+            <i class="bi bi-envelope-fill"></i><a href="mailto:contactooyinbobenin21@gmail.com">contactooyinbobenin21@gmail.com</a>
+            <i class="bi bi-phone-fill phone-icon"></i> +229 68-947-612
+        </div>
+        <div class="social-links d-none d-md-block">
+            <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+            <a href="https://www.facebook.com/fifonsi.lokonon.1/" class="facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        </div>
+    </div>
+</section>
+
+<!-- ======= Header ======= -->
+<header id="header" class="d-flex align-items-center">
+    <div class="container d-flex align-items-center">
+
+        <h1 class="logo me-auto">
+            <a href="index.html"><img src="assets/img/logo.png" alt=""></a>
+        </h1>
+
+        <nav id="navbar" class="navbar">
+            <ul>
+                <li><a class="nav-link scrollto" href="#hero">Home</a></li>
+                <li><a class="nav-link scrollto" href="#about">About</a></li>
+                <li><a class="nav-link scrollto" href="#services">Produits</a></li>
+                <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+                <li><a class="getstarted scrollto" href="connexion">Connexion</a></li>
+                <li>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" >
+                              <img src="assets/img/icone-user.jpeg" alt="" style="height: 60px; width: 60px;">
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                          <li><a class="dropdown-item" href="/userinfo"> <i class="fa fa-info"></i> Mon profil</a></li>
+                          <li><a class="dropdown-item" href="/panier"><i class="fa fa-shopping-cart"></i>Mon panier</a></li>
+                          <li><a class="dropdown-item" href="#"><i class="fa fa-sign-out-alt"></i>Déconnexion</a></li>
+                        </ul>
+                      </div>
+                </li>
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav>
+        <!-- .navbar -->
+
+    </div>
+</header>
+<!-- End Header -->
+<main>
+    <div class="principale">
+      <div class="side">
+        <div style="height: 300px;background-color: white; ">
+          <div style="margin: 10px;height: 250px;">
+            <img src="assets/img/icone-user.jpeg" alt="" style="height: 100%;width: 100%;">
+          </div>
+          <div class="pi" style="border: none;">
+            <div style=" text-align: center;"><h4>Dashboard</h4></div>
+          </div>
+        </div>
+        <div style="background-color: rgba(0, 255, 255, 0.288);">
+        <div class="pi">
+          <div class="op"><i class="fa fa-info"></i> <a href="http://">Mes Informations</a> </div>
+        </div>
+        <hr>
+        <div class="pi">
+          <div class="op"> <button class="btn"><i class="fa fa-edit"></i><a href="/profile">Modifier mon profil</a></button> </div>
+        </div>
+        <hr>
+        <div class="pi"style="background-color: bisque;">
+          <div class="op" > <button class="btn" ><i class="fa fa-shopping-cart"></i> <a href="/panier">Mon Panier</a> </button> </div>
+        </div>
+        <hr>
+        <div class="pi">
+          <div class="op"> <button class="btn"><i class="fa fa-sign-out-alt"></i><a href="http://">Se Deconnecter</a></button>  </div>
+        </div> 
+       </div>
+      </div>
+      <div class="con">
+        <div class="page-wrapper" style="width: 1050px; margin-left: 40px;" >
+            <!-- ============================================================== -->
+            <!-- Container fluid  -->
+            <!-- ============================================================== -->
+            <div class="page-content container-fluid">
+                <!-- ============================================================== -->
+                <!-- Start Page Content -->
+                <!-- ============================================================== -->
+                <div class="row">
+                    <!-- Column -->
+                    <div class="col-lg-12">
+                        <div class="card" style="border: none;">
+                            <div class="card-body">
+                                <button class="btn btn-dark" (click)="addButton()" > Ajouter un produit </button>
+                                <div class="table-responsive">
+                                    <table class="table product-overview table-striped" id="zero_config">
+                                        <thead>
+                                            <tr>
+                                                <th>Produits</th>
+                                                <th>Quantités</th>
+                                                <th>Prix</th>
+                                                <th>Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody >
+                                            <tr *ngFor="let ord of data.orderItems">
+                                                <td>
+                                                    <a href="javascript:void(0)">{{ord.product.name}}</a>
+                                                </td>
+                                                <td>
+                                                    <div>Nombre: <input type="number" min=0 max=50 id="cadre" value="ord.product.quantity" (keyup.enter)="updateQuantity(ord.id, $event)"></div>
+                                                </td>
+                                                <td> <span class="label label-success font-weight-100">{{ord.product.montant}}</span> </td>
+                                                <td><button class="btn" (click)="deleteFromShop(ord.id)" ><i class="fa fa-trash"id="supp"></i></button></td> 
+                                            </tr>
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <td>
+                                                    Montant total
+                                                </td>
+                                                <td style="background-color: aqua; width: 100px;
+                                                           position: relative;
+                                                           left: 350px;">{{data.amont}}</td>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                                <button class="btn btn-danger text-white float-right ml-3 d-none d-md-block" id="but"> Validez le panier
+                                </button>
+                            </div>
+        
+                        </div>
+                    </div>
+                    <!-- Column -->
+                </div>
+                <!-- ============================================================== -->
+                <!-- End PAge Content -->
+                <!-- ============================================================== -->
+                <!-- ============================================================== -->
+                <!-- Right sidebar -->
+                <!-- ============================================================== -->
+                <!-- .right-sidebar -->
+                <!-- ============================================================== -->
+                <!-- End Right sidebar -->
+                <!-- ============================================================== -->
+            </div>
+        </div>
+      </div>
+    </div>
+</main>  
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+        <div class="container">
+            <h3>Ope Oyinbo</h3>
+            <p>Avec les ananas,nous pourrons aller plus loin.</p>
+            <div class="social-links">
+                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            </div>
+            <div class="copyright">
+                &copy; Copyright <strong><span>Ope Oyinbo</span></strong>. All Rights Reserved
+            </div>
+            <div class="credits">
+               Designed by <a href="https://bootstrapmade.com/">IFRI</a>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer -->  
+
+

@@ -1,0 +1,82 @@
+#but {
+    background-color: #070f03e3;
+    border-radius: 100px;
+}
+
+#cadre {
+    width: 30%;
+    margin: 5px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+thead {
+    background-color: #29700c83;
+}
+
+#panier {
+    color: #48ff00;
+}
+
+#panier h5 {
+    font-size: 20px;
+}
+
+#supp {
+    font-size: 20px;
+}
+a
+{
+    text-decoration: none;
+}
+.side{
+    width: 25%;
+  }
+  .op{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+  }
+  .pi{
+    border: none;
+    height: 50px;
+  }
+  .pi:hover
+  {
+    box-shadow: 5px 5px 5px 5px rgb(181, 238, 48);
+  }
+  .pi:focus
+  {
+    background-color: rgb(181, 238, 48);
+  }
+  .principale{
+    display: flex;
+  }
+  img{
+    height: 100%;
+    width: 100%;
+  }
+  a
+  {
+    color: black;
+    text-decoration: none;
+  }
+  i{
+    margin-right: 5px;
+  }
+  #dropdownMenuButton1
+{
+    width: 60px;
+    height:60px;
+    margin-left: 65px;
+    background: none;
+}
+#dropdownMenuButton1 img
+{
+    border-radius: 50%;
+}

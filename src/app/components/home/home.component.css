@@ -1,0 +1,271 @@
+body {
+    background-color: #f2f9f4;
+}
+
+.childnav {
+    text-align: center;
+    background-color: #068d32;
+    color: #fff;
+    height: 27px;
+    width: 1378px;
+    font-size: 14px;
+    font-family: 'Segoe UI';
+    padding-top: 4px;
+}
+
+.nav {
+    background-color: #f2f9f4;
+    width: 1378px;
+    height: 110px;
+}
+
+.logo {
+    width: 90px;
+    height: 90px;
+}
+
+.input {
+    margin-top: 30px;
+    margin-left: 170px;
+    width: 300px;
+    font-family: "Segoe UI";
+}
+
+.totalresearch {
+    font-family: "Segoe UI";
+    font-size: 14px;
+    background-color: #f2f9f4;
+    border: 1px solid #ced4da;
+    width: 150px;
+    height: 33px;
+    padding-left: 8px;
+    padding-top: 4px;
+    margin-top: 26px;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    margin-left: 29px;
+}
+
+.menu {
+    margin-top: -30px;
+    font-family: "Segoe UI";
+    font-size: 18px;
+    margin-left: 95px;
+}
+
+.lancer {
+    width: 22px;
+    height: 22px;
+    margin-left: 475px;
+    margin-top: -110px;
+}
+
+.rechercher {
+    margin-left: 177px;
+    margin-top: -33px;
+    width: 325px;
+    height: 33px;
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    outline: none;
+}
+
+.envoyer {
+    height: 33px;
+    width: 30px;
+    margin-left: 475px;
+    margin-top: -63px;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    background-color: #068d32;
+}
+
+.a {
+    color: #212529;
+    text-decoration: none;
+}
+
+.hr {
+    width: 60px;
+    margin-top: 0px;
+    margin-left: 93px;
+}
+
+.profile {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 55px;
+    left: 75%;
+}
+
+.profile2 {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 52px;
+    left: 87%;
+}
+
+.connect {
+    position: absolute;
+    top: 60px;
+    left: 78%;
+}
+
+.panier {
+    position: absolute;
+    top: 60px;
+    left: 90%;
+}
+
+.bod {
+    height: 100vh;
+    background-image: url(/assets/images/img/ban2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 1350px 100%;
+}
+
+.bod1 {
+    font-family: "Roboto";
+    font-size: 35px;
+    margin-top: 400px;
+    margin-left: 100px;
+    color: #e5cae3;
+}
+
+.contact {
+    font-family: "Raleway";
+    font-size: 18px;
+    margin-left: 100px;
+    text-decoration: none;
+    color: #212529;
+    background-color: #fff;
+    border-radius: 15px;
+    width: 160px;
+    height: 55px;
+    padding: 14px;
+}
+
+.Qui {
+    font-family: "Segoe UI";
+    font-weight: bold;
+    font-size: 29px;
+    margin-left: 100px;
+    margin-top: 70px;
+}
+
+.para {
+    font-size: 19px;
+    font-family: Segoe UI, Regular;
+    margin-left: 100px;
+    text-align: justify;
+}
+
+.img {
+    margin-top: 70px;
+}
+
+.bg-brand-green {
+    background-color: #058d31;
+}
+
+.text-brand-green {
+    color: #058d31;
+}
+
+.h-fit {
+    height: fit-content;
+}
+
+.w-fit {
+    width: fit-content;
+}
+
+.newsletter {
+    padding-left: 120px;
+    padding-right: 120px;
+}
+
+.news {
+    font-size: 30px;
+}
+
+.new {
+    text-align: justify;
+}
+
+.newsletters {
+    margin-left: 540px;
+    width: 500px;
+    height: 70px;
+    margin-top: -80px;
+    border-radius: 0px;
+    opacity: 0.7;
+    background-color: #c5c3c3;
+}
+
+.GO {
+    margin-left: 1040px;
+    height: 70px;
+    background-color: #4e4d4d;
+    margin-top: -100px;
+    border-radius: 0px;
+}
+
+.footer {
+    background-color: #262424;
+    padding-top: 50px;
+    margin-top: 40px;
+    padding-left: 120px;
+    color: #fff;
+}
+
+.poli {
+    margin-left: 40px;
+}
+
+.suivre {
+    margin-left: 800px;
+    margin-top: -25px;
+}
+
+.icons {
+    width: 50px;
+    height: 150px;
+}
+
+.iconss {
+    width: 220px;
+    height: 30px;
+}
+
+.foot {
+    margin-left: 50px;
+}
+
+.num {
+    margin-top: -120px;
+}
+
+.nums {
+    margin-top: -140px;
+}
+
+.IFRI {
+    margin-top: 25px;
+}
+
+.copy {
+    background-color: #068d32;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.copy2 {
+    text-align: center;
+}

@@ -1,0 +1,38 @@
+<body>
+                      <form  [formGroup]="connectForm">
+                        <div class="form-body">
+                          <h4 class="card-title">Connexion</h4>
+                          <div class="row">
+                            <div class="col-md-8">
+                              <div class="form-group">
+                                <label class="control-label">Adresse e-mail</label>
+                                <div class="input-group mb-4">
+                                    <input type="email"  class="form-control" formControlName="emailuser" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-8">
+                              <div class="form-group">
+                                <label>Mot de passe</label>
+                                <div class="input-group mb-4">
+                                  <input type="password"  class="form-control" formControlName="pass"/>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!--/row-->
+                          <div class="">
+                              <div class="form-group">
+                                  <div class="input-group">
+                                      <button class="btn" type="submit" (click)="signin()">Se connecter</button>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="mt-2">
+                              Pas encore de compte? <a href="/inscription">S'inscrire</a>
+                          </div>
+                        </div>
+                      </form>
+</body>

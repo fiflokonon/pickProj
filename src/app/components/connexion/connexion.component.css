@@ -1,0 +1,54 @@
+label
+{
+    color: #53524ba2;
+    font-weight: bold;
+    font-size: 20px;
+}
+#image
+{
+    width: 450px;
+    height: 400px;
+    margin-left: -10px;
+}
+h4
+{
+    color: darkgray;
+    font-weight: bold;
+    text-align: center;
+}
+button
+{
+    width: 150px;
+    border-radius: 15px;
+    background-color: darkorange;
+}
+form
+{
+    width: 500px;
+    height: 400px;
+    margin: auto;
+    border-radius: 50px;
+    padding-bottom: 200px;
+    margin-bottom: 100px;
+}
+form input
+{
+    width: 230px;
+    border-radius: 20px;
+    text-align: center;
+}
+button[type="submit"]
+{
+    font-weight: bold;
+    margin-left: 150px;
+}
+body {
+    background-color: gainsboro;
+}
+
+.input {
+    margin-top: 30px;
+    margin-left: 170px;
+    width: 300px;
+    font-family: "Segoe UI";
+}

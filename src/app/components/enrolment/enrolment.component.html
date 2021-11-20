@@ -1,0 +1,99 @@
+
+<body>
+      <div class="page-wrapper">
+          <div class="page-content container-fluid mt-5">
+                  <div class="col-lg-4">
+                    <div class="card" style="width: 500px;
+                                             height: 700px;
+                                             border: none;">
+                      <div class="card-body">
+                        <form (ngSubmit)="enrolUser()" [formGroup]="enrolForm"> 
+                          <div class="form-body" style="margin-left: 50px;">
+                            <h4 class="card-title mb-2">Inscription</h4>
+                            <div class="row">
+                              <div class="col-md-10">
+                                <div class="form-group">
+                                  <label class="control-label">Nom</label>
+                                  <div class="input-group mb-1">
+                                      <input type="text"  class="form-control" formControlName="lastName"/>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-10">
+                                <div class="form-group">
+                                  <label>Prénoms</label>
+                                  <div class="input-group mb-1">
+                                    <input type="text"  class="form-control" formControlName="firstName" />
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-10">
+                                <div class="form-group">
+                                  <label>Nom d'utilisateur</label>
+                                  <div class="input-group mb-1">
+                                    <input type="text"  class="form-control" formControlName="userName"/>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-10">
+                                <div class="form-group">
+                                  <label>Adresse e-mail</label>
+                                  <div class="input-group mb-1">
+                                    <input type="email"  class="form-control" formControlName="email" />
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-10">
+                                <div class="form-group">
+                                  <label>Numéro de téléphone:</label>
+                                  <div class="input-group mb-1">
+                                    <input type="tel"  class="form-control" formControlName="phone"/>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-10">
+                                <div class="form-group">
+                                  <label>Mot de passe</label>
+                                  <div class="input-group mb-1">
+                                    <input type="password"  class="form-control" formControlName="password" />
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-10">
+                                <div class="form-group">
+                                  <label>Confirmer le mot de passe</label>
+                                  <div class="input-group mb-3">
+                                    <input type="password"  class="form-control" formControlName="cpassword"/>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <!--/row-->
+                            <div class="">
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <button class="btn" type="submit">S'inscrire</button>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Column -->
+                </div>
+          </div>
+  </body>

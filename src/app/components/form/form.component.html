@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="card">
+        <div class="card-title">
+            <h2>Enregistrer un produit</h2>
+        </div>
+        <div class="card-body">
+            <form class="form-horizontal form-material" [formGroup]="addForm" (ngSubmit)="clickButton()">
+                <div class="form-group">
+                    <div class="mb-3">
+                        <input type="text" class="form-control" placeholder="Nom du produit"formControlName="name">
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" placeholder="Prix" formControlName="prix">
+                    </div>
+                    <div class="mb-3">
+                        <select formControlName="category" class="form-control">
+                            <option value="us" selected disabled>Catégories</option>
+                            <option value="{{c.id}}" *ngFor="let c of cats"> {{c.name}} </option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" placeholder="Description" formControlName="description">
+                    </div>
+                    <div class="mb-3">
+                        <button type="submit" class="btn btn-info" >Ajouter</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
