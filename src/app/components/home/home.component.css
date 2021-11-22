@@ -269,3 +269,14 @@ body {
 .copy2 {
     text-align: center;
 }
+#flute
+{
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px 5px grey;
+}
+header
+{
+    top: 0px;
+    width: 100%;
+    position: fixed;
+}

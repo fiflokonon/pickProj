@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ConnexionComponent } from './components/connexion/connexion.component';
 import { EnrolmentComponent } from './components/enrolment/enrolment.component';
 import { FormComponent } from './components/form/form.component';
+import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
 import { ProdlistComponent } from './components/prodlist/prodlist.component';
 import { ProductadminComponent } from './components/productadmin/productadmin.component';
@@ -22,7 +23,8 @@ const routes: Routes = [
   {path:'panier', component: ShoppingComponent},
   {path:'profile', component: UserprofComponent},
   {path:'dashboard', component: UserdashComponent},
-  {path:'userinfo', component: UserinfoComponent}
+  {path:'userinfo', component: UserinfoComponent},
+  {path:'head', component: HeaderComponent}
 ];
 
 @NgModule({

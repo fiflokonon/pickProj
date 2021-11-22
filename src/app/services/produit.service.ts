@@ -12,7 +12,7 @@ export class ProduitService {
 
   }
 
-  private readonly API_URL=`http://192.168.0.179:5000/api`;
+  private readonly API_URL=`https://sell-ananas.herokuapp.com/api`;
 
 
   addNewProduct(data: any)

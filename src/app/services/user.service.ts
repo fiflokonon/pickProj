@@ -13,7 +13,7 @@ export class UserService {
   user : any;
   tok: string|any;
 
-  private readonly ULR_Api = `http://192.168.0.179:5000/api`;
+  private readonly ULR_Api = `https://sell-ananas.herokuapp.com/api`;
 
   userSignup( data: any)
   {

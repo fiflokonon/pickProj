@@ -1,0 +1,17 @@
+#dropdownMenuButton1
+{
+    width: 60px;
+    height:60px;
+    margin-left: 65px;
+    background: none;
+}
+#dropdownMenuButton1 img
+{
+    border-radius: 50%;
+}
+header
+{
+    top: 0px;
+    width: 100%;
+    position: fixed;
+}

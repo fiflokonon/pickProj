@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
-
+import { UserinfoComponent } from './components/userinfo/userinfo.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -15,7 +14,7 @@ import { ProdlistComponent } from './components/prodlist/prodlist.component';
 import { ShoppingComponent } from './components/shopping/shopping.component';
 import { UserprofComponent } from './components/userprof/userprof.component';
 import { UserdashComponent } from './components/userdash/userdash.component';
-import { UserinfoComponent } from './components/userinfo/userinfo.component';
+import { HeaderComponent } from './components/header/header.component';
 
 
 @NgModule({
@@ -31,6 +30,7 @@ import { UserinfoComponent } from './components/userinfo/userinfo.component';
     UserprofComponent,
     UserdashComponent,
     UserinfoComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
@@ -38,7 +38,7 @@ import { UserinfoComponent } from './components/userinfo/userinfo.component';
     ReactiveFormsModule,
     HttpClientModule,
     FormsModule
-  
+
   ],
   providers: [],
   bootstrap: [AppComponent]
