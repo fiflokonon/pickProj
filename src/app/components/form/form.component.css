@@ -1,0 +1,47 @@
+form
+{
+    width: 500px;
+    margin: auto;
+    padding: 10px;
+    margin-top: 50px;
+    border-radius: 30px;
+    background-color: rgb(177, 202, 153);
+}
+img
+{
+   width: 250px;
+   height: 60px;
+   margin-bottom: 5px;
+}
+.form-title
+{
+    text-align: center;
+    margin-bottom: 25px;
+}
+button
+{
+    color: white;
+    margin-left: 300px;
+    border-radius: 14px;
+    background-color: rgb(236, 74, 15);
+}
+form input, select
+{
+    width: 350px;
+    margin-left: 50px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: rgb(225, 230, 221);
+}
+
+form label
+{
+    margin-left: 50px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+a
+{
+    margin-left: 3px;
+    text-decoration: underline;
+}
