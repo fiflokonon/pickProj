@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AdmindashComponent } from './components/admindash/admindash.component';
 import { ConnexionComponent } from './components/connexion/connexion.component';
 import { EnrolmentComponent } from './components/enrolment/enrolment.component';
 import { FormComponent } from './components/form/form.component';
@@ -24,7 +25,8 @@ const routes: Routes = [
   {path:'profile', component: UserprofComponent},
   {path:'dashboard', component: UserdashComponent},
   {path:'userinfo', component: UserinfoComponent},
-  {path:'head', component: HeaderComponent}
+  {path:'head', component: HeaderComponent},
+  {path:'admindash', component: AdmindashComponent}
 ];
 
 @NgModule({
