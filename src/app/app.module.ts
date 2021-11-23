@@ -15,6 +15,7 @@ import { ShoppingComponent } from './components/shopping/shopping.component';
 import { UserprofComponent } from './components/userprof/userprof.component';
 import { UserdashComponent } from './components/userdash/userdash.component';
 import { HeaderComponent } from './components/header/header.component';
+import { AdmindashComponent } from './components/admindash/admindash.component';
 
 
 @NgModule({
@@ -31,6 +32,7 @@ import { HeaderComponent } from './components/header/header.component';
     UserdashComponent,
     UserinfoComponent,
     HeaderComponent,
+    AdmindashComponent,
   ],
   imports: [
     BrowserModule,

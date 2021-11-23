@@ -51,6 +51,7 @@ export class FormComponent implements OnInit {
     this.newProd.montant = this.addForm.get('prix').value;
     this.newProd.categorie = this.addForm.get('category').value;
     this.newProd.description = this.addForm.get('description').value;
+
     this.service.udpdateProd(localStorage.getItem('ident') as unknown as number, this.newProd)
     .toPromise().then(()=>{
       this.route.navigate(['/shop']);
@@ -63,6 +64,7 @@ export class FormComponent implements OnInit {
     this.newProd.montant = this.addForm.get('prix').value;
     this.newProd.categorie = this.addForm.get('category').value;
     this.newProd.description = this.addForm.get('description').value;
+    this.newProd.image = this.addForm.get('image').value;
     this.service.addNewProduct(this.newProd).toPromise()
     .then(()=>{
       this.route.navigate(['/shop']);
@@ -79,7 +81,8 @@ export class FormComponent implements OnInit {
        name: new FormControl(this.prod.name),
        prix: new FormControl(this.prod.montant),
        category: new FormControl(this.prod.categorie),
-       description: new FormControl(this.prod.description)
+       description: new FormControl(this.prod.description),
+       image: new FormControl(this.prod.image)
       });
     }
     else
@@ -88,7 +91,8 @@ export class FormComponent implements OnInit {
        name: new FormControl(),
        prix: new FormControl(),
        category: new FormControl(),
-       description: new FormControl()
+       description: new FormControl(),
+       image: new FormControl()
     });
     }
     this.serv.getCurrentUser().toPromise()

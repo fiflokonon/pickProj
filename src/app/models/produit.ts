@@ -6,4 +6,5 @@ export class Produit {
     montant: number|any;
     description: string|any;
     categorie: number|any;
+    image: File|any;
 }
