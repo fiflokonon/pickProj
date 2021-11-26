@@ -1,6 +1,6 @@
 <div class="container-fluid" id="contain">
     <div class="form-responsive">
-      <form [formGroup]="addForm" (ngSubmit)="clickButton()">
+      <form [formGroup]="addForm" (ngSubmit)="clickButton()" method="post" enctype="multipart/form-data">
         <div class="form-title"  >
           <img src="assets/img/logo.png" alt="icone-user">
           <h3>Enregistrer un produit</h3>
@@ -26,7 +26,13 @@
         </div>
         <div>
           <label>Image du produit</label>
-          <p><input type="file" class="form-control" formControlName="image"></p>
+          <p><input type="file" class="form-control"  (change)="onFileChanged($event)"></p>
+        </div>
+        <hr />
+        <div class="container row">
+            <div class="col-md-12">
+                <div *ngIf=message>{{message}}</div>
+            </div>
         </div>
         <div> 
           <button type="submit" class="btn">Enregistrer</button> 

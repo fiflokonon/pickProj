@@ -16,6 +16,7 @@ import { UserprofComponent } from './components/userprof/userprof.component';
 import { UserdashComponent } from './components/userdash/userdash.component';
 import { HeaderComponent } from './components/header/header.component';
 import { AdmindashComponent } from './components/admindash/admindash.component';
+import { CatlistComponent } from './components/catlist/catlist.component';
 
 
 @NgModule({
@@ -33,6 +34,7 @@ import { AdmindashComponent } from './components/admindash/admindash.component';
     UserinfoComponent,
     HeaderComponent,
     AdmindashComponent,
+    CatlistComponent,
   ],
   imports: [
     BrowserModule,

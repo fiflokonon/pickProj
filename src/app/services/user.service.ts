@@ -13,7 +13,7 @@ export class UserService {
   user : any;
   tok: string|any;
 
-  private readonly ULR_Api = `https://sell-ananas.herokuapp.com/api`;
+  private readonly ULR_Api = `http://192.168.0.103:5000/api`;
 
   userSignup( data: any)
   {
@@ -49,6 +49,7 @@ export class UserService {
     console.log('GET THE CURRENT ROLE')
     const url = `${this.ULR_Api}/user/me/role`;
     const headers = {
+      "responseType": "text",
       "Authorization": `Bearer ${localStorage.getItem('token')}`
     }
     return this.http.get(url, {

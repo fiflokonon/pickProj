@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpEventType } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Produit } from '../models/produit';
@@ -12,7 +12,7 @@ export class ProduitService {
 
   }
 
-  private readonly API_URL=`https://sell-ananas.herokuapp.com/api`;
+  private readonly API_URL=`http://192.168.0.103:5000/api`;
 
 
   addNewProduct(data: any)
@@ -24,6 +24,19 @@ export class ProduitService {
     }
     return this.http.post(url, data,{
        headers
+    });
+  }
+
+  addProdImg(id: number , uploadImageData: FormData)
+  {
+    const url = `${this.API_URL}/upload/${id}`;
+    const headers = {
+      "Authorization": "Bearer "+localStorage.getItem('token') 
+    }
+    return this.http.post(url, uploadImageData, {
+      reportProgress:true,
+      responseType: 'text',
+      observe: 'response'
     });
   }
 
@@ -84,6 +97,17 @@ export class ProduitService {
       "Authorization": "Bearer "+localStorage.getItem('token')
     }
     return this.http.get<any>(url, {
+      headers
+    });
+  }
+
+  addCategory( data: any)
+  {
+    const url = `${this.API_URL}/categorie`
+    const headers = {
+      "Authorization": "Bearer "+localStorage.getItem('token'),
+    }
+    return this.http.post(url, data, {
       headers
     });
   }
@@ -150,5 +174,4 @@ export class ProduitService {
       headers
     });
   }
-
 }

@@ -24,7 +24,6 @@ prods : Produit[]|any;
   {
     this.service.getProducts().toPromise()
     .then((response)=>{
-      console.log(response);
       this.prods = response;
     })
   }

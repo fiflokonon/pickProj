@@ -1,0 +1,48 @@
+<div class="container-fluid" id="contain">
+    <div class="form-responsive">
+      <form [formGroup]="catForm"  (ngSubmit)="addCategory()">
+        <div class="form-title">
+          <img src="assets/img/logo.png" alt="icone-user">
+          <h3>Enregistrer une catégorie</h3>
+        </div>
+        <div>
+          <label>Nom de la catégorie</label>
+          <p><input type="text" class="form-control" formControlName="name"></p>
+        </div>
+        <div>
+          <label>Description</label>
+          <p><input type="text" class="form-control" formControlName="description"></p>
+        </div>
+        <div>
+          <button type="submit" class="btn">Enregistrer</button> 
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="container">
+    <button class="btn" id="bouton" (click)="addButton()">Ajouter un produit</button>
+    <div class="row">
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th scope="col"class="text-light">Nom</th>
+                    <th scope="col" class="text-light">Description</th>
+                    <th scope="col" class="text-light">Options</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let c of cats">
+                    <td>{{c.name}}</td>
+                    <td>{{c.description}}</td>
+                    <td>
+                        <div class="icon">
+                            <div><button><i class="fa fa-edit" title="Edit" (click)="updateCat(c.id)" ></i></button></div>
+                            <div><button><i class="fa fa-trash-alt" title="Delete" (click)="deleteCat(c.id)" ></i></button></div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

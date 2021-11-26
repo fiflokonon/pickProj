@@ -1,3 +1,4 @@
+import { HttpEventType } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -16,6 +17,8 @@ export class FormComponent implements OnInit {
   addForm: FormGroup|any;
   cats: Category[] = [] ;
   prod: any;
+  message: string|any;
+  selectedFile :File|any;
   newProd = new Produit();
 
   constructor(private service: ProduitService, private route: Router, private serv: UserService) {
@@ -27,7 +30,6 @@ export class FormComponent implements OnInit {
   {
      this.service.getCategories().toPromise()
     .then((response)=>{
-      console.log(response)
       this.cats = response;  
     });
   }
@@ -64,17 +66,36 @@ export class FormComponent implements OnInit {
     this.newProd.montant = this.addForm.get('prix').value;
     this.newProd.categorie = this.addForm.get('category').value;
     this.newProd.description = this.addForm.get('description').value;
-    this.newProd.image = this.addForm.get('image').value;
     this.service.addNewProduct(this.newProd).toPromise()
-    .then(()=>{
-      this.route.navigate(['/shop']);
-      this.addForm.reset();
+    .then((response)=>{
+      let  prod : any = response;
+      this.upload(prod.id);
+      this.addForm.reset;
     });
+  }
+
+  onFileChanged(event: Event)
+  {
+    this.selectedFile = (<HTMLInputElement>event.target).value;
+  }
+
+  upload(id: number)
+  {
+    console.log(this.selectedFile);
+    let uploadImageData = new FormData();
+    uploadImageData.append('file', this.selectedFile.files, this.selectedFile.name);
+    this.service.addProdImg(id, uploadImageData).toPromise()
+    .then((response)=>{
+      if (response.status === 200) {
+        this.message = 'Image uploaded successfully';
+      } else {
+        this.message = 'Image not uploaded successfully';
+      }
+    })
   }
   ngOnInit(): void {
     const prodstr = localStorage.getItem('produit') as string;
      this.prod = JSON.parse(prodstr);
-     console.log(this.prod)
     if(localStorage.getItem('update') as unknown as number == 1)
     {
       this.addForm = new FormGroup({
@@ -82,8 +103,8 @@ export class FormComponent implements OnInit {
        prix: new FormControl(this.prod.montant),
        category: new FormControl(this.prod.categorie),
        description: new FormControl(this.prod.description),
-       image: new FormControl(this.prod.image)
       });
+      localStorage['update']=0;
     }
     else
     {
@@ -92,7 +113,6 @@ export class FormComponent implements OnInit {
        prix: new FormControl(),
        category: new FormControl(),
        description: new FormControl(),
-       image: new FormControl()
     });
     }
     this.serv.getCurrentUser().toPromise()
